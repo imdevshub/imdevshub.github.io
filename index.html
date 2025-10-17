@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IM DEVS - Coming Soon</title>
+
+  <!-- خط وأيقونات -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <meta name="theme-color" content="#0A0A0A">
+
+  <style>
+    :root {
+      --color-dark-bg: #0A0A0A;
+      --color-accent-green: #A9D143;
+      --color-text-light: #FFFFFF;
+      --color-text-subtle: #AAAAAA;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top center, #111 0%, #000 100%);
+      color: var(--color-text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+      opacity: 0;
+      animation: pageFadeIn 1.5s ease forwards;
+    }
+
+    @keyframes pageFadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      max-width: 90%;
+    }
+
+    /* الشعار */
+    .logo-container {
+      margin-bottom: 40px;
+    }
+    .logo-container img {
+      max-width: 250px;
+      height: auto;
+      border-radius: 8px;
+      animation: fadeIn 2s ease-out;
+      transition: all 0.3s ease;
+    }
+    .logo-container img:hover {
+      box-shadow: 0 0 20px rgba(169, 209, 67, 0.4);
+      transform: scale(1.03);
+    }
+
+    /* عنوان Coming Soon */
+    .coming-soon-text {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 800;
+      color: var(--color-accent-green);
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    /* رسالة فرعية */
+    .message {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-weight: 400;
+      color: var(--color-text-subtle);
+      max-width: 600px;
+      line-height: 1.5;
+      animation: fadeInUp 1.8s ease-out 0.5s both;
+      margin-bottom: 30px;
+    }
+
+    /* أيقونة Telegram الكبيرة */
+    .telegram-icon {
+      font-size: 4rem;
+      color: var(--color-accent-green);
+      margin-bottom: 20px;
+      animation: float 2s ease-in-out infinite alternate;
+      filter: drop-shadow(0 0 8px rgba(169,209,67,0.3));
+    }
+
+    @keyframes float {
+      from { transform: translateY(0px); }
+      to { transform: translateY(-6px); }
+    }
+
+    /* روابط التواصل */
+    .social-links {
+      display: flex;
+      gap: 40px;
+      animation: fadeIn 2s ease-out 1s both;
+    }
+
+    .social-link-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--color-text-subtle);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-link-item:hover {
+      color: var(--color-accent-green);
+      transform: translateY(-5px);
+    }
+    
+    .social-link-item i {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+    
+    .social-link-item span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* حركات بسيطة */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      from { text-shadow: 0 0 5px var(--color-accent-green); }
+      to { text-shadow: 0 0 20px var(--color-accent-green), 0 0 30px rgba(169, 209, 67, 0.4); }
+    }
+
+    /* تذييل */
+    .footer-text {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.85rem;
+      color: #555555;
+      font-weight: 300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- شعار الموقع -->
+    <div class="logo-container">
+      <img src="logo.png" alt="IM DEVS Logo">
+    </div>
+
+    <h1 class="coming-soon-text">COMING SOON</h1>
+
+    <p class="message">We are working hard on the new platform. Follow us for updates!</p>
+
+
+
+    <!-- روابط -->
+    <div class="social-links">
+      <a href="https://t.me/your_telegram_channel_link" target="_blank" class="social-link-item" aria-label="Telegram Channel">
+        <i class="fab fa-telegram"></i> 
+        <span>Channel</span>
+      </a>
+      <a href="https://t.me/your_telegram_group_link" target="_blank" class="social-link-item" aria-label="Telegram Group">
+        <i class="fab fa-telegram-plane"></i>
+        <span>Group</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="footer-text">© 2025 IM DEVS. All Rights Reserved.</p>
+
+</body>
+</html>
